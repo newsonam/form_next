@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import dynamic from 'next/dynamic';
 
 const Map = dynamic(
-    () => import('../components/Map'), // replace '@components/map' with your component's location
+    () => import('./Map'), // replace '@components/map' with your component's location
     { ssr: false } // This line is important. It's what prevents server-side render
 )
 let dataLocation = [];

@@ -10,20 +10,20 @@ const myIcon = new Icon({
  iconSize: [32,32]
 })
 const Map = () => {
-  const [map, setMap] = useState(null);
-  useEffect(() => {
-    if (map) {
-       setInterval(function () {
-          map.invalidateSize();
-       }, 100);
-    }
- }, [map]);
- useEffect(() => {
-  window.navigator.geolocation.getCurrentPosition(
-      (newPos) => setPosition(newPos),
-      console.error
-    );
-}, []);
+//   const [map, setMap] = useState(null);
+//   useEffect(() => {
+//     if (map) {
+//        setInterval(function () {
+//           map.invalidateSize();
+//        }, 100);
+//     }
+//  }, [map]);
+//  useEffect(() => {
+//   window.navigator.geolocation.getCurrentPosition(
+//       (newPos) => setPosition(newPos),
+//       console.error
+//     );
+// }, []);
 
 
   return (
