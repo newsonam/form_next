@@ -12,10 +12,10 @@ export default function FormControl(props) {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [location, setLocation] = useState({
-        latitude: '',
-        longitude: ''
+        latitude: 'null',
+        longitude: 'null'
     });
-    const [positionData, setPositionData] = useState([]);
+    const [positionData, setPositionData] = useState([null]);
     const [selected, setSelected] = useState(props.users[0].value);
 
     const handleChange = event => {
@@ -94,7 +94,7 @@ export default function FormControl(props) {
                         </select><br /></div>
                     </div>
 
-                    <Map positionData={positionData} />
+                    <Map />
 
                 </div>
                 <div className='centeralign w-50 row m-auto mb-3'>

@@ -9,7 +9,7 @@ const myIcon = new Icon({
  iconUrl: 'https://cdn-icons-png.flaticon.com/128/149/149060.png',
  iconSize: [32,32]
 })
-const Map = ({positionData}) => {
+const Map = () => {
   const [map, setMap] = useState(null);
   useEffect(() => {
     if (map) {
@@ -25,7 +25,7 @@ const Map = ({positionData}) => {
     );
 }, []);
 
-console.log(positionData);
+
   return (
     <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true} className={style.map} >
       <TileLayer
