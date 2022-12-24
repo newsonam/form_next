@@ -10,14 +10,14 @@ const myIcon = new Icon({
  iconSize: [32,32]
 })
 const Map = () => {
-//   const [map, setMap] = useState(null);
-//   useEffect(() => {
-//     if (map) {
-//        setInterval(function () {
-//           map.invalidateSize();
-//        }, 100);
-//     }
-//  }, [map]);
+  const [map, setMap] = useState(null);
+  useEffect(() => {
+    if (map) {
+       setInterval(function () {
+          map.invalidateSize();
+       }, 100);
+    }
+ }, [map]);
 //  useEffect(() => {
 //   window.navigator.geolocation.getCurrentPosition(
 //       (newPos) => setPosition(newPos),
@@ -27,7 +27,7 @@ const Map = () => {
 
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true} className={style.map} >
+    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true} className={style.map} whenCreated={map} >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
